@@ -266,7 +266,9 @@
       },
       "BussinessLayer/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.4",
           "Model Layer": "1.0.0",
+          "NLog": "5.4.0",
           "RepositoryLayer": "1.0.0"
         },
         "runtime": {

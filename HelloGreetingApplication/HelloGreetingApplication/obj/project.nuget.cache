@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9GO7CulRbuc=",
+  "dgSpecHash": "pK899E5U88A=",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrator\\Desktop\\New folder\\GreetingApp_2115800030\\HelloGreetingApplication\\HelloGreetingApplication\\HelloGreetingApplication.csproj",
   "expectedPackageFiles": [
@@ -31,5 +31,12 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\system.collections.immutable\\6.0.1\\system.collections.immutable.6.0.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.2\\system.diagnostics.diagnosticsource.6.0.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Administrator\\Desktop\\New folder\\GreetingApp_2115800030\\HelloGreetingApplication\\HelloGreetingApplication\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }

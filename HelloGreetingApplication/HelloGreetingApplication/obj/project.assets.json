@@ -431,7 +431,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.4",
           "Model Layer": "1.0.0",
+          "NLog": "5.4.0",
           "RepositoryLayer": "1.0.0"
         },
         "compile": {
@@ -1359,5 +1361,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\Administrator\\Desktop\\New folder\\GreetingApp_2115800030\\HelloGreetingApplication\\HelloGreetingApplication\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
