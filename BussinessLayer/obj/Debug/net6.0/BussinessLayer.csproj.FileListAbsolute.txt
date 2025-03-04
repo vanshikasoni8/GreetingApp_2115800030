@@ -32,3 +32,21 @@ D:\greetingapp\BussinessLayer\obj\Debug\net6.0\BussinessLayer.dll
 D:\greetingapp\BussinessLayer\obj\Debug\net6.0\refint\BussinessLayer.dll
 D:\greetingapp\BussinessLayer\obj\Debug\net6.0\BussinessLayer.pdb
 D:\greetingapp\BussinessLayer\obj\Debug\net6.0\ref\BussinessLayer.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\bin\Debug\net6.0\BussinessLayer.deps.json
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\bin\Debug\net6.0\BussinessLayer.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\bin\Debug\net6.0\BussinessLayer.pdb
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\bin\Debug\net6.0\Model Layer.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\bin\Debug\net6.0\RepositoryLayer.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\bin\Debug\net6.0\Model Layer.pdb
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\bin\Debug\net6.0\RepositoryLayer.pdb
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\obj\Debug\net6.0\BussinessLayer.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\obj\Debug\net6.0\BussinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\obj\Debug\net6.0\BussinessLayer.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\obj\Debug\net6.0\BussinessLayer.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\obj\Debug\net6.0\BussinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\obj\Debug\net6.0\BussinessLayer.sourcelink.json
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\obj\Debug\net6.0\Bussines.E1038C4E.Up2Date
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\obj\Debug\net6.0\BussinessLayer.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\obj\Debug\net6.0\refint\BussinessLayer.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\obj\Debug\net6.0\BussinessLayer.pdb
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\BussinessLayer\obj\Debug\net6.0\ref\BussinessLayer.dll

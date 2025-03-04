@@ -1,3 +1,4 @@
+using BussinessLayer.Service;
 using Microsoft.AspNetCore.Mvc;
 using Model_Layer.Model;
 
@@ -12,13 +13,15 @@ namespace HelloGreetingApplication.Controllers
 
     {
         private readonly ILogger<HelloGreetingController> _logger;
+        private readonly GreetingServiceBL _greetingService;
 
         /// <summary>
         /// Constructor to initialize logger.
         /// </summary>
-        public HelloGreetingController(ILogger<HelloGreetingController> logger)
+        public HelloGreetingController(ILogger<HelloGreetingController> logger, GreetingServiceBL greetingService)
         {
             _logger = logger;
+            _greetingService = greetingService;
         }
 
         /// <summary>
@@ -99,6 +102,17 @@ namespace HelloGreetingApplication.Controllers
             };
 
             return Ok(responseModel);
+        }
+
+        /// <summary>
+        /// for greeting UC2
+        /// </summary>
+        /// <returns></returns>
+
+        [HttpGet("greet")]
+        public IActionResult GetGreeting()
+        {
+            return Ok(_greetingService.GetGreeting());
         }
 
     }

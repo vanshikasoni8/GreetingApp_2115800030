@@ -95,3 +95,64 @@ D:\greetingapp\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.
 D:\greetingapp\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 D:\greetingapp\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 D:\greetingapp\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\appsettings.json
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\HelloGreetingApplication.staticwebassets.endpoints.json
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\HelloGreetingApplication.exe
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\HelloGreetingApplication.deps.json
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\HelloGreetingApplication.runtimeconfig.json
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\HelloGreetingApplication.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\HelloGreetingApplication.pdb
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Humanizer.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.Logging.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\NLog.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\NLog.Extensions.Logging.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\NLog.Web.AspNetCore.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\System.Collections.Immutable.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\BussinessLayer.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Model Layer.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\RepositoryLayer.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\BussinessLayer.pdb
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\Model Layer.pdb
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\RepositoryLayer.pdb
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.csproj.AssemblyReference.cache
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.AssemblyInfoInputs.cache
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.AssemblyInfo.cs
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.sourcelink.json
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\scopedcss\bundle\HelloGreetingApplication.styles.css
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\staticwebassets.build.endpoints.json
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\staticwebassets\msbuild.HelloGreetingApplication.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\staticwebassets\msbuild.HelloGreetingApplication.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\staticwebassets\msbuild.build.HelloGreetingApplication.props
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.HelloGreetingApplication.props
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.HelloGreetingApplication.props
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\staticwebassets.upToDateCheck.txt
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGre.BED6AAB5.Up2Date
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\refint\HelloGreetingApplication.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.pdb
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.genruntimeconfig.cache
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\ref\HelloGreetingApplication.dll

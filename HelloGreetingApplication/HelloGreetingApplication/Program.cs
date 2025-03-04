@@ -1,3 +1,4 @@
+using BussinessLayer.Service;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -18,6 +19,9 @@ try
     builder.Services.AddControllers();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
+
+    // Register GreetingService
+    builder.Services.AddSingleton<GreetingServiceBL>();
 
     var app = builder.Build();
 

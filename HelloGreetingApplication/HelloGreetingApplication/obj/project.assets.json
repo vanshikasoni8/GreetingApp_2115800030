@@ -431,7 +431,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "Microsoft.Extensions.Logging.Abstractions": "6.0.4",
           "Model Layer": "1.0.0",
+          "NLog": "5.4.0",
           "RepositoryLayer": "1.0.0"
         },
         "compile": {
@@ -1267,11 +1269,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\greetingapp\\HelloGreetingApplication\\HelloGreetingApplication\\HelloGreetingApplication.csproj",
+      "projectUniqueName": "C:\\Users\\Administrator\\Desktop\\New folder\\GreetingApp_2115800030\\HelloGreetingApplication\\HelloGreetingApplication\\HelloGreetingApplication.csproj",
       "projectName": "HelloGreetingApplication",
-      "projectPath": "D:\\greetingapp\\HelloGreetingApplication\\HelloGreetingApplication\\HelloGreetingApplication.csproj",
+      "projectPath": "C:\\Users\\Administrator\\Desktop\\New folder\\GreetingApp_2115800030\\HelloGreetingApplication\\HelloGreetingApplication\\HelloGreetingApplication.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\greetingapp\\HelloGreetingApplication\\HelloGreetingApplication\\obj\\",
+      "outputPath": "C:\\Users\\Administrator\\Desktop\\New folder\\GreetingApp_2115800030\\HelloGreetingApplication\\HelloGreetingApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1292,8 +1294,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\greetingapp\\BussinessLayer\\BussinessLayer.csproj": {
-              "projectPath": "D:\\greetingapp\\BussinessLayer\\BussinessLayer.csproj"
+            "C:\\Users\\Administrator\\Desktop\\New folder\\GreetingApp_2115800030\\BussinessLayer\\BussinessLayer.csproj": {
+              "projectPath": "C:\\Users\\Administrator\\Desktop\\New folder\\GreetingApp_2115800030\\BussinessLayer\\BussinessLayer.csproj"
             }
           }
         }
