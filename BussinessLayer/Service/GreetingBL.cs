@@ -18,10 +18,24 @@ namespace BussinessLayer.Service
             _logger = logger;
         }
 
-        public string GetGreeting()
+        public string GetGreeting(string firstName, string lastName)
         {
-            _logger.LogInformation("GreetingService: Returning 'Hello World' message.");
-            return "Hello World";
+            if (!string.IsNullOrWhiteSpace(firstName) && !string.IsNullOrWhiteSpace(lastName))
+            {
+                return $"Hello, {firstName} {lastName}!";
+            }
+            else if (!string.IsNullOrWhiteSpace(firstName))
+            {
+                return $"Hello, {firstName}!";
+            }
+            else if (!string.IsNullOrWhiteSpace(lastName))
+            {
+                return $"Hello, Mr./Ms. {lastName}!";
+            }
+            else
+            {
+                return "Hello, World!";
+            }
         }
     }
 }

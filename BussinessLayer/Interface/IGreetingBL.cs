@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace BussinessLayer.Interface
 {
-    internal interface IGreetingBL
+    public interface IGreetingBL
     {
+        string GetGreeting(string FirstName,  string LastName);
     }
 }
