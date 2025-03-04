@@ -14,11 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("HelloGreetingApplication")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-<<<<<<< HEAD
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d8822ef0f7c89a99a550e2da53c4fafcf3c3b92a")]
-=======
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbd775b379b487135c6ccb665e0140f88c159a51")]
->>>>>>> UC3
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c3f13fb286ebe4eb81f1368cc44b1c06cc70c492")]
 [assembly: System.Reflection.AssemblyProductAttribute("HelloGreetingApplication")]
 [assembly: System.Reflection.AssemblyTitleAttribute("HelloGreetingApplication")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

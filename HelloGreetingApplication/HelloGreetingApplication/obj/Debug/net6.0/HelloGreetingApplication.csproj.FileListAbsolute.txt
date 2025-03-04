@@ -156,3 +156,4 @@ C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingAp
 C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.pdb
 C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\HelloGreetingApplication.genruntimeconfig.cache
 C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\obj\Debug\net6.0\ref\HelloGreetingApplication.dll
+C:\Users\Administrator\Desktop\New folder\GreetingApp_2115800030\HelloGreetingApplication\HelloGreetingApplication\bin\Debug\net6.0\nlog.config
