@@ -16,5 +16,7 @@ namespace BussinessLayer.Interface
         void SaveGreetingMessage(GreetingEntity greeting);
         List<GreetingEntity> GetSavedGreetings();
 
+        GreetingEntity GetGreetingById(int id);
+
     }
 }

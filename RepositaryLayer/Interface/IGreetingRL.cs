@@ -10,7 +10,12 @@ namespace RepositaryLayer.Interface
 {
     public interface IGreetingRL
     {
-        void SaveGreeting(GreetingEntity greeting);
+        //void SaveGreeting(GreetingEntity greeting);
         List<GreetingEntity> GetAllGreetings();
+
+        GreetingEntity SaveGreeting(GreetingEntity greeting);
+
+        GreetingEntity GetGreetingById(int id);
+
     }
 }

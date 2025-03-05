@@ -1,6 +1,7 @@
 ﻿using BussinessLayer.Interface;
 using BussinessLayer.Service;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using Modellayer.Context;
 using NLog;
 using NLog.Web;
@@ -27,6 +28,8 @@ try
 
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
+
+
 
     // Add services to the container.
 
