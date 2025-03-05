@@ -1,7 +1,11 @@
 ﻿using BussinessLayer.Interface;
 using BussinessLayer.Service;
+using Microsoft.EntityFrameworkCore;
+using Modellayer.Context;
 using NLog;
 using NLog.Web;
+using RepositaryLayer.Interface;
+using RepositaryLayer.Service;
 
 //Implementing NLogger
 var logger = LogManager.Setup().LoadConfigurationFromFile("nlog.config").GetCurrentClassLogger();
@@ -11,6 +15,9 @@ try
     logger.Info("Application is starting...");
 
     var builder = WebApplication.CreateBuilder(args);
+
+    builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
     //Configure NLog
     builder.Logging.ClearProviders();
@@ -27,6 +34,7 @@ try
 
     //Registering the GreetingService
     builder.Services.AddScoped<IGreetingBL, GreetingBL>();
+    builder.Services.AddScoped<IGreetingRL, GreetingRL>();
 
     var app = builder.Build();
 
