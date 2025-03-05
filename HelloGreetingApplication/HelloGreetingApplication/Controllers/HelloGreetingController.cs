@@ -1,3 +1,4 @@
+using BussinessLayer.Interface;
 using BussinessLayer.Service;
 using Microsoft.AspNetCore.Mvc;
 using Model_Layer.Model;
@@ -13,15 +14,17 @@ namespace HelloGreetingApplication.Controllers
 
     {
         private readonly ILogger<HelloGreetingController> _logger;
-        private readonly GreetingServiceBL _greetingService;
+        //private readonly GreetingBL _greetingService;
+        private readonly IGreetingBL _greetingBL;
 
         /// <summary>
         /// Constructor to initialize logger.
         /// </summary>
-        public HelloGreetingController(ILogger<HelloGreetingController> logger, GreetingServiceBL greetingService)
+        public HelloGreetingController(ILogger<HelloGreetingController> logger, IGreetingBL greetingBL)
         {
             _logger = logger;
-            _greetingService = greetingService;
+            //_greetingService = greetingService;
+            _greetingBL = greetingBL;
         }
 
         /// <summary>
@@ -117,9 +120,24 @@ namespace HelloGreetingApplication.Controllers
 
             ResponseModel.Success = true;
             ResponseModel.Message = "Greeting message fetched successfully";
-            ResponseModel.Data = _greetingService.GetGreeting(firstName, lastName);
+            ResponseModel.Data = _greetingBL.GetGreeting(firstName, lastName);
 
             return Ok(ResponseModel);
+        }
+
+
+        [HttpPost("save")]
+        public IActionResult SaveGreeting([FromBody] GreetingDTO greetingDTO)
+        {
+            var result = _greetingBL.SaveGreeting(
+                greetingDTO.Key,
+                greetingDTO.Value,
+                greetingDTO.FirstName,
+                greetingDTO.LastName,
+                greetingDTO.Message
+            );
+
+            return Ok(new { message = "Greeting saved successfully!", data = result });
         }
 
     }
