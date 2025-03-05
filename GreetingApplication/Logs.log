@@ -1,0 +1,37 @@
+2025-03-05 15:20:12.4356 Info Application is starting... 
+2025-03-05 15:20:14.1950 Info Now listening on: https://localhost:7178 
+2025-03-05 15:20:14.2185 Info Now listening on: http://localhost:5250 
+2025-03-05 15:20:14.3361 Info Application started. Press Ctrl+C to shut down. 
+2025-03-05 15:20:14.3417 Info Hosting environment: Development 
+2025-03-05 15:20:14.3417 Info Content root path: E:\GreetingApplication\GreetingApplication\ 
+2025-03-05 15:20:15.3041 Info Request starting HTTP/2 GET https://localhost:7178/Swagger/index.html - - 
+2025-03-05 15:20:16.1653 Info Request finished HTTP/2 GET https://localhost:7178/Swagger/index.html - - - 200 - text/html;charset=utf-8 862.8496ms 
+2025-03-05 15:20:16.2921 Info Request starting HTTP/2 GET https://localhost:7178/_framework/aspnetcore-browser-refresh.js - - 
+2025-03-05 15:20:16.3239 Info Request starting HTTP/2 GET https://localhost:7178/Swagger/index.js - - 
+2025-03-05 15:20:16.3239 Info Request finished HTTP/2 GET https://localhost:7178/Swagger/index.js - - - 200 - application/javascript;charset=utf-8 14.2491ms 
+2025-03-05 15:20:16.3631 Info Request starting HTTP/2 GET https://localhost:7178/_vs/browserLink - - 
+2025-03-05 15:20:16.3631 Info Request finished HTTP/2 GET https://localhost:7178/_framework/aspnetcore-browser-refresh.js - - - 200 12370 application/javascript;+charset=utf-8 72.8040ms 
+2025-03-05 15:20:16.4867 Info Request finished HTTP/2 GET https://localhost:7178/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 123.5128ms 
+2025-03-05 15:20:16.6074 Info Request starting HTTP/2 GET https://localhost:7178/Swagger/v1/swagger.json - - 
+2025-03-05 15:20:16.6212 Info Request finished HTTP/2 GET https://localhost:7178/Swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 13.7747ms 
+2025-03-05 15:20:35.0163 Info Request starting HTTP/2 GET https://localhost:7178/GreetingApplication - - 
+2025-03-05 15:20:35.0163 Info Executing endpoint 'GreetingApplication.Controllers.GreetingApplicationController.Get (GreetingApplication)' 
+2025-03-05 15:20:35.0394 Info Route matched with {action = "Get", controller = "GreetingApplication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Get() on controller GreetingApplication.Controllers.GreetingApplicationController (GreetingApplication). 
+2025-03-05 15:20:35.1421 Info Executing OkObjectResult, writing value of type 'Modellayer.Model.ResponseBody`1[[System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-05 15:20:35.1625 Info Executed action GreetingApplication.Controllers.GreetingApplicationController.Get (GreetingApplication) in 113.3778ms 
+2025-03-05 15:20:35.1625 Info Executed endpoint 'GreetingApplication.Controllers.GreetingApplicationController.Get (GreetingApplication)' 
+2025-03-05 15:20:35.1625 Info Request finished HTTP/2 GET https://localhost:7178/GreetingApplication - - - 200 - application/json;+charset=utf-8 147.3061ms 
+2025-03-05 15:20:49.1694 Info Request starting HTTP/2 POST https://localhost:7178/GreetingApplication application/json 42 
+2025-03-05 15:20:49.1694 Info Executing endpoint 'GreetingApplication.Controllers.GreetingApplicationController.Post (GreetingApplication)' 
+2025-03-05 15:20:49.2011 Info Route matched with {action = "Post", controller = "GreetingApplication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Post(Modellayer.Model.RequestBody) on controller GreetingApplication.Controllers.GreetingApplicationController (GreetingApplication). 
+2025-03-05 15:20:49.2577 Info Executing OkObjectResult, writing value of type 'Modellayer.Model.ResponseBody`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-05 15:20:49.2577 Info Executed action GreetingApplication.Controllers.GreetingApplicationController.Post (GreetingApplication) in 56.9472ms 
+2025-03-05 15:20:49.2577 Info Executed endpoint 'GreetingApplication.Controllers.GreetingApplicationController.Post (GreetingApplication)' 
+2025-03-05 15:20:49.2577 Info Request finished HTTP/2 POST https://localhost:7178/GreetingApplication application/json 42 - 200 - application/json;+charset=utf-8 90.9994ms 
+2025-03-05 15:21:05.3147 Info Request starting HTTP/2 DELETE https://localhost:7178/GreetingApplication/string - - 
+2025-03-05 15:21:05.3147 Info Executing endpoint 'GreetingApplication.Controllers.GreetingApplicationController.Delete (GreetingApplication)' 
+2025-03-05 15:21:05.3147 Info Route matched with {action = "Delete", controller = "GreetingApplication"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Delete(System.String) on controller GreetingApplication.Controllers.GreetingApplicationController (GreetingApplication). 
+2025-03-05 15:21:05.3243 Info Executing OkObjectResult, writing value of type 'Modellayer.Model.ResponseBody`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'. 
+2025-03-05 15:21:05.3243 Info Executed action GreetingApplication.Controllers.GreetingApplicationController.Delete (GreetingApplication) in 6.4145ms 
+2025-03-05 15:21:05.3243 Info Executed endpoint 'GreetingApplication.Controllers.GreetingApplicationController.Delete (GreetingApplication)' 
+2025-03-05 15:21:05.3243 Info Request finished HTTP/2 DELETE https://localhost:7178/GreetingApplication/string - - - 200 - application/json;+charset=utf-8 11.5225ms 

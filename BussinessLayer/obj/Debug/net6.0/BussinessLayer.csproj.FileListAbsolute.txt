@@ -1,0 +1,17 @@
+E:\GreetingApplication\BussinessLayer\bin\Debug\net6.0\BussinessLayer.deps.json
+E:\GreetingApplication\BussinessLayer\bin\Debug\net6.0\BussinessLayer.dll
+E:\GreetingApplication\BussinessLayer\bin\Debug\net6.0\BussinessLayer.pdb
+E:\GreetingApplication\BussinessLayer\bin\Debug\net6.0\Modellayer.dll
+E:\GreetingApplication\BussinessLayer\bin\Debug\net6.0\RepositaryLayer.dll
+E:\GreetingApplication\BussinessLayer\bin\Debug\net6.0\Modellayer.pdb
+E:\GreetingApplication\BussinessLayer\bin\Debug\net6.0\RepositaryLayer.pdb
+E:\GreetingApplication\BussinessLayer\obj\Debug\net6.0\BussinessLayer.csproj.AssemblyReference.cache
+E:\GreetingApplication\BussinessLayer\obj\Debug\net6.0\BussinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\GreetingApplication\BussinessLayer\obj\Debug\net6.0\BussinessLayer.AssemblyInfoInputs.cache
+E:\GreetingApplication\BussinessLayer\obj\Debug\net6.0\BussinessLayer.AssemblyInfo.cs
+E:\GreetingApplication\BussinessLayer\obj\Debug\net6.0\BussinessLayer.csproj.CoreCompileInputs.cache
+E:\GreetingApplication\BussinessLayer\obj\Debug\net6.0\Bussines.E1038C4E.Up2Date
+E:\GreetingApplication\BussinessLayer\obj\Debug\net6.0\BussinessLayer.dll
+E:\GreetingApplication\BussinessLayer\obj\Debug\net6.0\refint\BussinessLayer.dll
+E:\GreetingApplication\BussinessLayer\obj\Debug\net6.0\BussinessLayer.pdb
+E:\GreetingApplication\BussinessLayer\obj\Debug\net6.0\ref\BussinessLayer.dll

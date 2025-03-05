@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "uH7DXOlqShI8sq8n2ncPjQfqhUrE98UOhscZKTmJe/s=",
+  "Source": "GreetingApplication",
+  "BasePath": "_content/GreetingApplication",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
