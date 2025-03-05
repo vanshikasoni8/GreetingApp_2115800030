@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GreetingApplication\\Modellayer\\Modellayer.csproj": {}
+    "E:\\CGProject\\GreetingApp_2115800030\\Modellayer\\Modellayer.csproj": {}
   },
   "projects": {
-    "E:\\GreetingApplication\\Modellayer\\Modellayer.csproj": {
+    "E:\\CGProject\\GreetingApp_2115800030\\Modellayer\\Modellayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GreetingApplication\\Modellayer\\Modellayer.csproj",
+        "projectUniqueName": "E:\\CGProject\\GreetingApp_2115800030\\Modellayer\\Modellayer.csproj",
         "projectName": "Modellayer",
-        "projectPath": "E:\\GreetingApplication\\Modellayer\\Modellayer.csproj",
+        "projectPath": "E:\\CGProject\\GreetingApp_2115800030\\Modellayer\\Modellayer.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\GreetingApplication\\Modellayer\\obj\\",
+        "outputPath": "E:\\CGProject\\GreetingApp_2115800030\\Modellayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

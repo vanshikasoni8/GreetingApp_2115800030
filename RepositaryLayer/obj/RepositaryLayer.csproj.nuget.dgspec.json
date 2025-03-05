@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GreetingApplication\\RepositaryLayer\\RepositaryLayer.csproj": {}
+    "E:\\CGProject\\GreetingApp_2115800030\\RepositaryLayer\\RepositaryLayer.csproj": {}
   },
   "projects": {
-    "E:\\GreetingApplication\\RepositaryLayer\\RepositaryLayer.csproj": {
+    "E:\\CGProject\\GreetingApp_2115800030\\RepositaryLayer\\RepositaryLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GreetingApplication\\RepositaryLayer\\RepositaryLayer.csproj",
+        "projectUniqueName": "E:\\CGProject\\GreetingApp_2115800030\\RepositaryLayer\\RepositaryLayer.csproj",
         "projectName": "RepositaryLayer",
-        "projectPath": "E:\\GreetingApplication\\RepositaryLayer\\RepositaryLayer.csproj",
+        "projectPath": "E:\\CGProject\\GreetingApp_2115800030\\RepositaryLayer\\RepositaryLayer.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "E:\\GreetingApplication\\RepositaryLayer\\obj\\",
+        "outputPath": "E:\\CGProject\\GreetingApp_2115800030\\RepositaryLayer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

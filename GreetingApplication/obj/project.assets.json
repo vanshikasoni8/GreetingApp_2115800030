@@ -1015,11 +1015,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GreetingApplication\\GreetingApplication\\GreetingApplication.csproj",
+      "projectUniqueName": "E:\\CGProject\\GreetingApp_2115800030\\GreetingApplication\\GreetingApplication.csproj",
       "projectName": "GreetingApplication",
-      "projectPath": "E:\\GreetingApplication\\GreetingApplication\\GreetingApplication.csproj",
+      "projectPath": "E:\\CGProject\\GreetingApp_2115800030\\GreetingApplication\\GreetingApplication.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\GreetingApplication\\GreetingApplication\\obj\\",
+      "outputPath": "E:\\CGProject\\GreetingApp_2115800030\\GreetingApplication\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -1040,8 +1040,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\GreetingApplication\\BussinessLayer\\BussinessLayer.csproj": {
-              "projectPath": "E:\\GreetingApplication\\BussinessLayer\\BussinessLayer.csproj"
+            "E:\\CGProject\\GreetingApp_2115800030\\BussinessLayer\\BussinessLayer.csproj": {
+              "projectPath": "E:\\CGProject\\GreetingApp_2115800030\\BussinessLayer\\BussinessLayer.csproj"
             }
           }
         }

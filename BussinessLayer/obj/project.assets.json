@@ -49,11 +49,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GreetingApplication\\BussinessLayer\\BussinessLayer.csproj",
+      "projectUniqueName": "E:\\CGProject\\GreetingApp_2115800030\\BussinessLayer\\BussinessLayer.csproj",
       "projectName": "BussinessLayer",
-      "projectPath": "E:\\GreetingApplication\\BussinessLayer\\BussinessLayer.csproj",
+      "projectPath": "E:\\CGProject\\GreetingApp_2115800030\\BussinessLayer\\BussinessLayer.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "E:\\GreetingApplication\\BussinessLayer\\obj\\",
+      "outputPath": "E:\\CGProject\\GreetingApp_2115800030\\BussinessLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -74,11 +74,11 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "E:\\GreetingApplication\\Modellayer\\Modellayer.csproj": {
-              "projectPath": "E:\\GreetingApplication\\Modellayer\\Modellayer.csproj"
+            "E:\\CGProject\\GreetingApp_2115800030\\Modellayer\\Modellayer.csproj": {
+              "projectPath": "E:\\CGProject\\GreetingApp_2115800030\\Modellayer\\Modellayer.csproj"
             },
-            "E:\\GreetingApplication\\RepositaryLayer\\RepositaryLayer.csproj": {
-              "projectPath": "E:\\GreetingApplication\\RepositaryLayer\\RepositaryLayer.csproj"
+            "E:\\CGProject\\GreetingApp_2115800030\\RepositaryLayer\\RepositaryLayer.csproj": {
+              "projectPath": "E:\\CGProject\\GreetingApp_2115800030\\RepositaryLayer\\RepositaryLayer.csproj"
             }
           }
         }
