@@ -43,5 +43,21 @@ namespace RepositaryLayer.Service
             return _context.Greetings.FirstOrDefault(g => g.Id == id);
         }
 
+        public bool UpdateGreeting(int id, GreetingEntity updatedGreeting)
+        {
+            var existingGreeting = _context.Greetings.Find(id);
+            if (existingGreeting == null)
+            {
+                return false; // Greeting not found
+            }
+
+            // Update the greeting properties
+            existingGreeting.Message = updatedGreeting.Message;
+
+            // Save changes to the database
+            _context.SaveChanges();
+            return true;
+        }
+
     }
 }

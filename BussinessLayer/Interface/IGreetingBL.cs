@@ -20,5 +20,8 @@ namespace BussinessLayer.Interface
 
         
         List<GreetingEntity> GetAllGreetingsInList();
+
+        // Add the method to update a greeting
+        bool UpdateGreeting(int id, GreetingEntity updatedGreeting);
     }
 }
