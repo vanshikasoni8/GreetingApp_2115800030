@@ -23,5 +23,8 @@ namespace RepositaryLayer.Interface
         // Add the method to edit a greeting
         bool UpdateGreeting(int id, GreetingEntity updatedGreeting);
 
+        // Add the method to delete a greeting by ID
+        bool DeleteGreeting(int id);
+
     }
 }

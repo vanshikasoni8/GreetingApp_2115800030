@@ -59,5 +59,22 @@ namespace RepositaryLayer.Service
             return true;
         }
 
+
+        public bool DeleteGreeting(int id)
+        {
+            var existingGreeting = _context.Greetings.Find(id);
+            if (existingGreeting == null)
+            {
+                return false; // Greeting not found
+            }
+
+            // Remove the greeting 
+            _context.Greetings.Remove(existingGreeting);
+
+            // Save changes 
+            _context.SaveChanges();
+            return true;
+        }
+
     }
 }

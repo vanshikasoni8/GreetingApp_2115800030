@@ -23,5 +23,7 @@ namespace BussinessLayer.Interface
 
         // Add the method to update a greeting
         bool UpdateGreeting(int id, GreetingEntity updatedGreeting);
+
+        bool DeleteGreeting(int id);
     }
 }
