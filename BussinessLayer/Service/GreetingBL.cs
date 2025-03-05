@@ -61,5 +61,16 @@ namespace BussinessLayer.Service
             // Call the repository method to get the greeting by ID
             return _greetingRL.GetGreetingById(id);
         }
+
+
+        public List<GreetingEntity> GetAllGreetings()
+        {
+            return _greetingRL.GetAllGreetings();
+        }
+
+        public List<GreetingEntity> GetAllGreetingsInList()
+        {
+            return _greetingRL.GetAllGreetings();
+        }
     }
 }

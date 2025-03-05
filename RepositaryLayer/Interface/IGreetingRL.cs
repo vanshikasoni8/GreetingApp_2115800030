@@ -17,5 +17,8 @@ namespace RepositaryLayer.Interface
 
         GreetingEntity GetGreetingById(int id);
 
+        // Add the method to list all greetings
+        List<GreetingEntity> GetSavedGreetings();
+
     }
 }
