@@ -213,5 +213,35 @@ namespace GreetingApplication.Controllers
 
             return Ok(new { Success = true, Data = greeting });
         }
+
+
+        [HttpGet]
+        [Route("get-greetingsinlist")]
+        public IActionResult GetGreetingsInList()
+        {
+            ResponseBody<List<GreetingEntity>> responseBody = new ResponseBody<List<GreetingEntity>>();
+
+            try
+            {
+                // Fetch all greetings from the business layer
+                var greetings = _greetingService.GetAllGreetingsInList();
+
+                if (greetings == null || !greetings.Any())
+                {
+                    return NotFound(new { Success = false, Message = "No greetings found" });
+                }
+
+                responseBody.Success = true;
+                responseBody.Message = "Greetings fetched successfully";
+                responseBody.Data = greetings;
+            }
+            catch (Exception ex)
+            {
+                responseBody.Success = false;
+                responseBody.Message = $"Error: {ex.Message}";
+            }
+
+            return Ok(responseBody);
+        }
     }
 }

@@ -32,6 +32,10 @@ namespace RepositaryLayer.Service
         {
             return _context.Greetings.ToList();  // Fetch all greetings from the database
         }
+        public List<GreetingEntity> GetSavedGreetings()
+        {
+            return _context.Greetings.ToList();
+        }
 
         public GreetingEntity GetGreetingById(int id)
         {
