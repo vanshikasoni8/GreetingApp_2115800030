@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore;
 using Modellayer.Context;
 using Modellayer.Model;
 using RepositaryLayer.Entity;
@@ -14,28 +15,29 @@ namespace RepositaryLayer.Service
     {
         private readonly AppDbContext _context;
 
-        public GreetingRL(AppDbContext context)
+        public GreetingRL(AppDbContext dbContext)
         {
-            _context = context;
+            _context = dbContext;
         }
 
-        public void SaveGreeting(GreetingEntity greeting)
+        public GreetingEntity SaveGreeting(GreetingEntity greeting)
         {
-            _context.Greetings.Add(new GreetingMessage
-            {
-                Id = greeting.Id,
-                Message = greeting.Message
-            });
+            //_logger.LogInformation("Saving greeting: {GreetingMessage}", greeting.Message);  // ✅ Log the data
+            _context.Greetings.Add(greeting);
             _context.SaveChanges();
+            return greeting;
         }
 
-        public List<GreetingEntity> GetAllGreetings()
+        public List<GreetingEntity> GetAllGreetings()  // Implement this method
         {
-            return _context.Greetings.Select(g => new GreetingEntity
-            {
-                Id = g.Id,
-                Message = g.Message
-            }).ToList();
+            return _context.Greetings.ToList();  // Fetch all greetings from the database
         }
+
+        public GreetingEntity GetGreetingById(int id)
+        {
+            // Find a greeting by its ID
+            return _context.Greetings.FirstOrDefault(g => g.Id == id);
+        }
+
     }
 }

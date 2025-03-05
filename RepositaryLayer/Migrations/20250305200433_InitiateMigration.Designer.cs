@@ -11,7 +11,7 @@ using Modellayer.Context;
 namespace RepositaryLayer.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250305172646_InitiateMigration")]
+    [Migration("20250305200433_InitiateMigration")]
     partial class InitiateMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -23,13 +23,21 @@ namespace RepositaryLayer.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Modellayer.Model.GreetingMessage", b =>
+            modelBuilder.Entity("RepositaryLayer.Entity.GreetingEntity", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("FirstName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("LastName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Message")
                         .IsRequired()

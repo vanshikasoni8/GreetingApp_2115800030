@@ -55,5 +55,11 @@ namespace BussinessLayer.Service
         {
             return _greetingRL.GetAllGreetings();
         }
+
+        public GreetingEntity GetGreetingById(int id)
+        {
+            // Call the repository method to get the greeting by ID
+            return _greetingRL.GetGreetingById(id);
+        }
     }
 }
