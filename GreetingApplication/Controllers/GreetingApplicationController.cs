@@ -1,4 +1,5 @@
 using BussinessLayer.Interface;
+using BussinessLayer.Service;
 using Microsoft.AspNetCore.Mvc;
 using Modellayer.Model;
 
@@ -25,6 +26,7 @@ namespace GreetingApplication.Controllers
         /// </summary>
         /// <returns>Hello, World</returns>
         [HttpGet]
+        [Route("printmessage")]
         public IActionResult Get()
         {
             ResponseBody<Dictionary<string, string>> ResponseModel = new ResponseBody<Dictionary<string, string>>();
@@ -37,6 +39,7 @@ namespace GreetingApplication.Controllers
         }
 
         [HttpPost]
+        [Route("AddingData")]
         public IActionResult Post(RequestBody requestModel)
         {
             ResponseBody<string> ResponseModel = new ResponseBody<string>();
@@ -109,7 +112,7 @@ namespace GreetingApplication.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]
-        [Route("greeting")]
+        [Route("greetingApp")]
         public IActionResult Greetings()
         {
             ResponseBody<string> ResponseModel = new ResponseBody<string>();
@@ -119,6 +122,21 @@ namespace GreetingApplication.Controllers
             ResponseModel.Data = _greetingService.GetGreetingMessage();
 
             return Ok(ResponseModel);
+        }
+
+        /// <summary>
+        /// Adding UC3 functionality  
+        /// </summary>
+        /// <param name="firstName"></param>
+        /// <param name="lastName"></param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("greeting")]
+        public IActionResult ByNameGreetings([FromQuery] string firstName, [FromQuery] string lastName)
+        {
+            var greetingMessage = _greetingService.NameGreeting(firstName, lastName);
+
+            return Ok(new { message = greetingMessage });
         }
     }
 }
