@@ -20,5 +20,8 @@ namespace RepositaryLayer.Interface
         // Add the method to list all greetings
         List<GreetingEntity> GetSavedGreetings();
 
+        // Add the method to edit a greeting
+        bool UpdateGreeting(int id, GreetingEntity updatedGreeting);
+
     }
 }

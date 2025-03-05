@@ -243,5 +243,45 @@ namespace GreetingApplication.Controllers
 
             return Ok(responseBody);
         }
+
+
+        [HttpPut]
+        [Route("update-greeting/{id}")]
+        public IActionResult UpdateGreeting(int id, [FromBody] GreetingEntity updatedGreeting)
+        {
+            ResponseBody<string> responseBody = new ResponseBody<string>();
+
+            try
+            {
+                // Check if the ID is valid
+                if (id <= 0)
+                {
+                    responseBody.Success = false;
+                    responseBody.Message = "Invalid ID";
+                    return BadRequest(responseBody);
+                }
+
+                // Call the business layer to update the greeting
+                bool isUpdated = _greetingService.UpdateGreeting(id, updatedGreeting);
+
+                if (!isUpdated)
+                {
+                    responseBody.Success = false;
+                    responseBody.Message = "Greeting not found or update failed";
+                    return NotFound(responseBody);
+                }
+
+                responseBody.Success = true;
+                responseBody.Message = "Greeting updated successfully";
+                responseBody.Data = $"Greeting with ID {id} has been updated.";
+            }
+            catch (Exception ex)
+            {
+                responseBody.Success = false;
+                responseBody.Message = $"Error: {ex.Message}";
+            }
+
+            return Ok(responseBody);
+        }
     }
 }
