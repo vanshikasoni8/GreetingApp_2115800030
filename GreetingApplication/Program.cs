@@ -1,4 +1,6 @@
-﻿using NLog;
+﻿using BussinessLayer.Interface;
+using BussinessLayer.Service;
+using NLog;
 using NLog.Web;
 
 //Implementing NLogger
@@ -22,6 +24,9 @@ try
     // Add services to the container.
 
     builder.Services.AddControllers();
+
+    //Registering the GreetingService
+    builder.Services.AddScoped<IGreetingBL, GreetingBL>();
 
     var app = builder.Build();
 

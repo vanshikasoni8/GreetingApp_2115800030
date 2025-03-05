@@ -1,3 +1,4 @@
+using BussinessLayer.Interface;
 using Microsoft.AspNetCore.Mvc;
 using Modellayer.Model;
 
@@ -11,6 +12,13 @@ namespace GreetingApplication.Controllers
     public class GreetingApplicationController : ControllerBase
     {
         private static Dictionary<string, string> greetings = new Dictionary<string, string>();
+        private readonly IGreetingBL _greetingService;
+
+        public GreetingApplicationController(IGreetingBL greetingService)
+        {
+            _greetingService = greetingService;
+        }
+
 
         /// <summary>
         /// Get Method to get the Greeting Message
@@ -92,6 +100,23 @@ namespace GreetingApplication.Controllers
             greetings.Remove(key);
             ResponseModel.Success = true;
             ResponseModel.Message = "Entry deleted successfully";
+
+            return Ok(ResponseModel);
+        }
+
+        /// <summary>
+        /// Add UC2 greeting 
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("greeting")]
+        public IActionResult Greetings()
+        {
+            ResponseBody<string> ResponseModel = new ResponseBody<string>();
+
+            ResponseModel.Success = true;
+            ResponseModel.Message = "Greeting message fetched successfully";
+            ResponseModel.Data = _greetingService.GetGreetingMessage();
 
             return Ok(ResponseModel);
         }
