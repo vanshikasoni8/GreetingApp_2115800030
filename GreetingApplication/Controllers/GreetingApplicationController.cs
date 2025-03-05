@@ -52,7 +52,11 @@ namespace GreetingApplication.Controllers
         }
 
 
-
+        /// <summary>
+        /// Post method for post the message
+        /// </summary>
+        /// <param name="RequestBody"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("post")]
         public IActionResult Post(RequestBody RequestBody)
@@ -70,7 +74,11 @@ namespace GreetingApplication.Controllers
         }
 
 
-
+        /// <summary>
+        /// Put method is used for partial changes
+        /// </summary>
+        /// <param name="RequestBody"></param>
+        /// <returns></returns>
         [HttpPut]
         [Route("post")]
         public IActionResult Put(RequestBody RequestBody)
@@ -88,6 +96,11 @@ namespace GreetingApplication.Controllers
             return Ok(ResponseBody);
         }
 
+        /// <summary>
+        /// Patch Method is used for major changes in already existed data
+        /// </summary>
+        /// <param name="RequestBody"></param>
+        /// <returns></returns>
         [HttpPatch]
         [Route("post")]
         public IActionResult Patch(RequestBody RequestBody)
@@ -103,6 +116,11 @@ namespace GreetingApplication.Controllers
             return Ok(ResponseBody);
         }
 
+        /// <summary>
+        /// Delete Method for deleting the data for Database
+        /// </summary>
+        /// <param name="RequestBody"></param>
+        /// <returns></returns>
         [HttpDelete]
         [Route("delete")]
         
@@ -124,7 +142,7 @@ namespace GreetingApplication.Controllers
 
 
         /// <summary>
-        /// Add UC2 greeting 
+        /// Giving Hello World message
         /// </summary>
         /// <returns></returns>
         [HttpGet]
@@ -141,7 +159,7 @@ namespace GreetingApplication.Controllers
         }
 
         /// <summary>
-        /// Adding UC3 functionality  
+        /// Giving greeting message with first and Last name 
         /// </summary>
         /// <param name="firstName"></param>
         /// <param name="lastName"></param>
@@ -156,6 +174,10 @@ namespace GreetingApplication.Controllers
         }
 
 
+        /// <summary>
+        /// Getting the Greeting in the database
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("get-greetings")]
         public IActionResult GetGreetings()
@@ -177,6 +199,11 @@ namespace GreetingApplication.Controllers
             return Ok(ResponseBody);
         }
 
+        /// <summary>
+        /// Saving the Greetings in the Database
+        /// </summary>
+        /// <param name="greeting"></param>
+        /// <returns></returns>
         [HttpPost]
         [Route("save-greeting")]
         public IActionResult SaveGreetings([FromBody] GreetingEntity greeting) { 
@@ -199,7 +226,11 @@ namespace GreetingApplication.Controllers
             
         }
 
-
+        /// <summary>
+        /// Getting the Information with Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         [HttpGet]
         [Route("get-greeting/{id}")]
         public IActionResult GetGreetingById(int id)
@@ -215,6 +246,10 @@ namespace GreetingApplication.Controllers
         }
 
 
+        /// <summary>
+        /// All Greeting in a List
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         [Route("get-greetingsinlist")]
         public IActionResult GetGreetingsInList()
@@ -245,6 +280,12 @@ namespace GreetingApplication.Controllers
         }
 
 
+        /// <summary>
+        /// Updating the Greeting Message by Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="updatedGreeting"></param>
+        /// <returns></returns>
         [HttpPut]
         [Route("update-greeting/{id}")]
         public IActionResult UpdateGreeting(int id, [FromBody] GreetingEntity updatedGreeting)
@@ -274,6 +315,43 @@ namespace GreetingApplication.Controllers
                 responseBody.Success = true;
                 responseBody.Message = "Greeting updated successfully";
                 responseBody.Data = $"Greeting with ID {id} has been updated.";
+            }
+            catch (Exception ex)
+            {
+                responseBody.Success = false;
+                responseBody.Message = $"Error: {ex.Message}";
+            }
+
+            return Ok(responseBody);
+        }
+
+        /// <summary>
+        /// Deleting the Data with the Id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+
+        [HttpDelete]
+        [Route("delete-greeting/{id}")]
+        public IActionResult DeleteGreeting(int id)
+        {
+            ResponseBody<string> responseBody = new ResponseBody<string>();
+
+            try
+            {
+                // Call the business layer to delete 
+                bool isDeleted = _greetingService.DeleteGreeting(id);
+
+                if (!isDeleted)
+                {
+                    responseBody.Success = false;
+                    responseBody.Message = "Greeting not found or delete failed";
+                    return NotFound(responseBody);
+                }
+
+                responseBody.Success = true;
+                responseBody.Message = "Greeting deleted successfully";
+                responseBody.Data = $"Greeting with ID {id} has been deleted.";
             }
             catch (Exception ex)
             {
