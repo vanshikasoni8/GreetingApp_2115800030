@@ -2,6 +2,8 @@ using BussinessLayer.Interface;
 using BussinessLayer.Service;
 using Microsoft.AspNetCore.Mvc;
 using Modellayer.Model;
+using RepositaryLayer.Entity;
+using RepositaryLayer.Interface;
 
 namespace GreetingApplication.Controllers
 {
@@ -14,10 +16,12 @@ namespace GreetingApplication.Controllers
     {
         private static Dictionary<string, string> greetings = new Dictionary<string, string>();
         private readonly IGreetingBL _greetingService;
+        private readonly IGreetingRL _greetingRL;
 
-        public GreetingApplicationController(IGreetingBL greetingService)
+        public GreetingApplicationController(IGreetingBL greetingService, IGreetingRL greetingRL)
         {
             _greetingService = greetingService;
+            _greetingRL = greetingRL;
         }
 
 
@@ -137,6 +141,28 @@ namespace GreetingApplication.Controllers
             var greetingMessage = _greetingService.NameGreeting(firstName, lastName);
 
             return Ok(new { message = greetingMessage });
+        }
+
+
+        [HttpGet]
+        [Route("get-greetings")]
+        public IActionResult GetGreetings()
+        {
+            ResponseBody<List<GreetingEntity>> ResponseModel = new ResponseBody<List<GreetingEntity>>();
+
+            try
+            {
+                ResponseModel.Success = true;
+                ResponseModel.Message = "Greetings fetched successfully";
+                ResponseModel.Data = _greetingService.GetSavedGreetings();
+            }
+            catch (Exception ex)
+            {
+                ResponseModel.Success = false;
+                ResponseModel.Message = $"Error : {ex.Message}";
+            }
+
+            return Ok(ResponseModel);
         }
     }
 }
