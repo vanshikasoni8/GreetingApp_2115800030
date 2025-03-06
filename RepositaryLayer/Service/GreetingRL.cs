@@ -22,58 +22,100 @@ namespace RepositaryLayer.Service
 
         public GreetingEntity SaveGreeting(GreetingEntity greeting)
         {
-            //_logger.LogInformation("Saving greeting: {GreetingMessage}", greeting.Message);  // ✅ Log the data
-            _context.Greetings.Add(greeting);
-            _context.SaveChanges();
-            return greeting;
+            try
+            {
+                _context.Greetings.Add(greeting);
+                _context.SaveChanges();
+                return greeting;
+            }
+            catch (Exception ex)
+            {
+                // Log the exception if needed (e.g., using a logger)
+                throw new Exception("An error occurred while saving the greeting message.", ex);
+            }
         }
 
         public List<GreetingEntity> GetAllGreetings()  // Implement this method
         {
-            return _context.Greetings.ToList();  // Fetch all greetings from the database
+            try
+            {
+                return _context.Greetings.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while fetching all greetings.", ex);
+            }
         }
         public List<GreetingEntity> GetSavedGreetings()
         {
-            return _context.Greetings.ToList();
+            try
+            {
+                return _context.Greetings.ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while fetching saved greetings.", ex);
+            }
         }
 
         public GreetingEntity GetGreetingById(int id)
         {
-            // Find a greeting by its ID
-            return _context.Greetings.FirstOrDefault(g => g.Id == id);
+            try
+            {
+                return _context.Greetings.FirstOrDefault(g => g.Id == id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while fetching the greeting with ID {id}.", ex);
+            }
         }
 
         public bool UpdateGreeting(int id, GreetingEntity updatedGreeting)
         {
-            var existingGreeting = _context.Greetings.Find(id);
-            if (existingGreeting == null)
+            try
             {
-                return false; // Greeting not found
+                var existingGreeting = _context.Greetings.Find(id);
+                if (existingGreeting == null)
+                {
+                    return false; // Greeting not found
+                }
+
+                // Update the greeting properties
+                existingGreeting.Message = updatedGreeting.Message;
+
+                // Save changes to the database
+                _context.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while updating the greeting with ID {id}.", ex);
             }
 
-            // Update the greeting properties
-            existingGreeting.Message = updatedGreeting.Message;
-
-            // Save changes to the database
-            _context.SaveChanges();
-            return true;
         }
 
 
         public bool DeleteGreeting(int id)
         {
-            var existingGreeting = _context.Greetings.Find(id);
-            if (existingGreeting == null)
+            try
             {
-                return false; // Greeting not found
+                var existingGreeting = _context.Greetings.Find(id);
+                if (existingGreeting == null)
+                {
+                    return false; // Greeting not found
+                }
+
+                // Remove the greeting
+                _context.Greetings.Remove(existingGreeting);
+
+                // Save changes
+                _context.SaveChanges();
+                return true;
             }
-
-            // Remove the greeting 
-            _context.Greetings.Remove(existingGreeting);
-
-            // Save changes 
-            _context.SaveChanges();
-            return true;
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while deleting the greeting with ID {id}.", ex);
+            }
         }
 
     }

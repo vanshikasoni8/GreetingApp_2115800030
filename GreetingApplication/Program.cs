@@ -7,6 +7,7 @@ using NLog;
 using NLog.Web;
 using RepositaryLayer.Interface;
 using RepositaryLayer.Service;
+using MiddleWare.GlobalExceptionHandler;
 
 //Implementing NLogger
 var logger = LogManager.Setup().LoadConfigurationFromFile("nlog.config").GetCurrentClassLogger();
@@ -43,6 +44,9 @@ try
 
     app.UseSwagger();
     app.UseSwaggerUI();
+
+    // Add the middleware to the pipeline
+    app.UseMiddleware<ExceptionHandler>();
 
     // Configure the HTTP request pipeline.
 
