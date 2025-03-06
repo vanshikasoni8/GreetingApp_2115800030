@@ -21,51 +21,95 @@ namespace BussinessLayer.Service
 
         public string GetGreetingMessage()
         {
-            return "Hello, World!";
+            try
+            {
+                return "Hello, World!";
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while getting the greeting message.", ex);
+            }
+            
         }
 
 
         public string NameGreeting(string firstName, string lastName)
         {
-            if (!string.IsNullOrWhiteSpace(firstName) && !string.IsNullOrWhiteSpace(lastName))
+            try
             {
-                return $"Hello {firstName} {lastName}!";
+
+
+                if (!string.IsNullOrWhiteSpace(firstName) && !string.IsNullOrWhiteSpace(lastName))
+                {
+                    return $"Hello {firstName} {lastName}!";
+                }
+                else if (!string.IsNullOrWhiteSpace(firstName))
+                {
+                    return $"Hello {firstName}!";
+                }
+                else if (!string.IsNullOrWhiteSpace(lastName))
+                {
+                    return $"Hello {lastName}!";
+                }
+                else
+                {
+                    return "Hello World!";
+                }
             }
-            else if (!string.IsNullOrWhiteSpace(firstName))
+            catch (Exception ex)
             {
-                return $"Hello {firstName}!";
-            }
-            else if (!string.IsNullOrWhiteSpace(lastName))
-            {
-                return $"Hello {lastName}!";
-            }
-            else
-            {
-                return "Hello World!";
+                throw new Exception("An error occurred while generating the name greeting.", ex);
             }
         }
 
 
         public void SaveGreetingMessage(GreetingEntity greetingEntity)
         {
-            _greetingRL.SaveGreeting(greetingEntity);
+            try
+            {
+                _greetingRL.SaveGreeting(greetingEntity);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while saving the greeting message.", ex);
+            }
         }
 
         public List<GreetingEntity> GetSavedGreetings()
         {
-            return _greetingRL.GetAllGreetings();
+            try
+            {
+                return _greetingRL.GetAllGreetings();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while fetching saved greetings.", ex);
+            }
         }
 
         public GreetingEntity GetGreetingById(int id)
         {
-            // Call the repository method to get the greeting by ID
-            return _greetingRL.GetGreetingById(id);
+            try
+            {
+                return _greetingRL.GetGreetingById(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while fetching the greeting with ID {id}.", ex);
+            }
         }
 
 
         public List<GreetingEntity> GetAllGreetings()
         {
-            return _greetingRL.GetAllGreetings();
+            try
+            {
+                return _greetingRL.GetAllGreetings();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("An error occurred while fetching all greetings.", ex);
+            }
         }
 
         public List<GreetingEntity> GetAllGreetingsInList()
@@ -75,12 +119,26 @@ namespace BussinessLayer.Service
 
         public bool UpdateGreeting(int id, GreetingEntity updatedGreeting)
         {
-            return _greetingRL.UpdateGreeting(id, updatedGreeting);
+            try
+            {
+                return _greetingRL.UpdateGreeting(id, updatedGreeting);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while updating the greeting with ID {id}.", ex);
+            }
         }
 
         public bool DeleteGreeting(int id)
         {
-            return _greetingRL.DeleteGreeting(id);
+            try
+            {
+                return _greetingRL.DeleteGreeting(id);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"An error occurred while deleting the greeting with ID {id}.", ex);
+            }
         }
     }
 }

@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\BussinessLayer\BussinessLayer.csproj" />
+    <ProjectReference Include="..\MiddleWare\MiddleWare.csproj" />
   </ItemGroup>
 
   <ItemGroup>
