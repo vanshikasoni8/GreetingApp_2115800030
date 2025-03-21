@@ -1,5 +1,7 @@
-﻿using BussinessLayer.Interface;
+﻿using BussinessLayer.Helper;
+using BussinessLayer.Interface;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Modellayer.Model;
 
 namespace GreetingApplication.Controllers
@@ -9,11 +11,12 @@ namespace GreetingApplication.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserBL _userBL;
+        private readonly PasswordService _passwordService;
 
-
-        public UserController(IUserBL userBL)
+        public UserController(IUserBL userBL, PasswordService passwordService)
         {
             _userBL = userBL;
+            _passwordService = passwordService;
         }
 
         [HttpPost("register")]
@@ -31,40 +34,48 @@ namespace GreetingApplication.Controllers
                     return BadRequest($"{model.Email} already exists");
                 }
             }
+            catch (DbUpdateException dbEx)
+            {
+                return StatusCode(500, $"Database Error: {dbEx.InnerException?.Message}");
+            }
             catch (Exception ex)
             {
-                return StatusCode(500, ex.Message);
+                return StatusCode(500, $"Error: {ex.Message}");
             }
-
-            //return Ok("User registered successfully!");
         }
 
         [HttpPost("login")]
         public IActionResult Login([FromBody] LoginModel model)
         {
-            bool isValidUser = _userBL.Login(model);  // Assuming _authService has Login logic
+            var isValidUser = _userBL.Login(model);  // Assuming _authService has Login logic
 
-            if (isValidUser)
-            {
-                return Ok("Login successful!");
-            }
-
-            return Unauthorized("Invalid credentials");
+            return Ok(isValidUser);
         }
 
-        //[HttpPost("forgot-password")]
-        //public IActionResult ForgotPassword([FromBody] ForgotPasswordModel model)
-        //{
-        //    var response = _userBL.ForgotPassword(model.Email);
-        //    return Ok(response);
-        //}
+        [HttpPost("forgotpassword")]
+        public IActionResult ForgotPassword([FromBody] ForgotPassword model)
+        {
+            var success = _passwordService.ForgotPassword(model.Email);
+            if (!success)
+            {
+                return BadRequest("User not found or unable to process request.");
+            }
 
-        //[HttpPost("reset-password")]
-        //public IActionResult ResetPassword([FromBody] ResetPasswordModel model)
-        //{
-        //    var response = _userBL.ResetPassword(model.Email, model.NewPassword, model.Token);
-        //    return Ok(response);
-        //}
+            return Ok("Password reset link sent to your email.");
+        }
+
+        // Reset Password - Validate Token & Set New Password
+        [HttpPost("resetpassword")]
+        public IActionResult ResetPassword([FromBody] ResetPasswordModel model)
+        {
+            var success = _passwordService.ResetPassword(model.Token, model.NewPassword);
+            if (!success)
+            {
+                return BadRequest("Invalid or expired reset token.");
+            }
+
+            return Ok("Password reset successfully.");
+        }
 
     }
 

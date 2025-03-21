@@ -6,7 +6,7 @@ namespace RepositaryLayer.Interface
     {
         public bool Registeration(RegisterModel registerModel);
 
-        public bool Login(LoginModel loginModel);
+        public string Login(LoginModel loginModel);
 
         //public string ForgotPassword(string email);
         //public string ResetPassword(string email, string newPassword, string token);

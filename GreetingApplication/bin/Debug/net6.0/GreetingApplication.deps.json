@@ -626,9 +626,11 @@
       "BussinessLayer/1.0.0": {
         "dependencies": {
           "BCrypt.Net-Next": "4.0.3",
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "6.0.36",
           "MiddleWare": "1.0.0",
           "Modellayer": "1.0.0",
-          "RepositaryLayer": "1.0.0"
+          "RepositaryLayer": "1.0.0",
+          "System.IdentityModel.Tokens.Jwt": "6.36.0"
         },
         "runtime": {
           "BussinessLayer.dll": {

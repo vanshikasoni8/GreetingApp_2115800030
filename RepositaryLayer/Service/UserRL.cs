@@ -8,20 +8,24 @@ using Modellayer.Context;
 using Modellayer.Model;
 using RepositaryLayer.Entity;
 using RepositaryLayer.Interface;
+using Microsoft.Extensions.Configuration;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using Microsoft.IdentityModel.Tokens;
 
 namespace RepositaryLayer.Service
 {
     public class UserRL : IUserRL
     {
-
         private readonly AppDbContext _context;
-        
+        private readonly IConfiguration _config;
 
-        public UserRL(AppDbContext dbContext)
+        public UserRL(AppDbContext dbContext, IConfiguration config)
         {
             _context = dbContext;
-            
+            _config = config;
         }
+
         public bool Registeration(RegisterModel registerModel)
         {
             var existingUser = _context.User.FirstOrDefault(u => u.Email == registerModel.Email);
@@ -38,7 +42,8 @@ namespace RepositaryLayer.Service
                 Email = registerModel.Email,
                 Name = registerModel.Name,
                 PasswordHash = hashedPassword,
-                Salt = salt // Store the salt in the database
+                Salt = salt, // Store the salt in the database
+                ResetToken = ""
             };
 
             _context.User.Add(userEntity);
@@ -61,60 +66,50 @@ namespace RepositaryLayer.Service
             byte[] saltBytes = Convert.FromBase64String(salt);
             using (var sha256 = SHA256.Create())
             {
-                byte[] passwordBytes = System.Text.Encoding.UTF8.GetBytes(password);
+                byte[] passwordBytes = Encoding.UTF8.GetBytes(password);
                 byte[] combinedBytes = saltBytes.Concat(passwordBytes).ToArray();
                 byte[] hashedBytes = sha256.ComputeHash(combinedBytes);
                 return Convert.ToBase64String(hashedBytes);
             }
         }
 
-        public bool Login(LoginModel loginModel)
+        public string Login(LoginModel loginModel)
         {
             var user = _context.User.FirstOrDefault(u => u.Email == loginModel.Email);
             if (user == null)
             {
-                return false; // User not found
+                return "NO USER FOUND!!"; // User not found
             }
 
             // Verify the password using stored salt
             string hashedInputPassword = HashPassword(loginModel.Password, user.Salt);
             if (hashedInputPassword == user.PasswordHash)
             {
-                return true; // Login successful
+                // Login successful
+                return GenerateJwtToken(user.Id, user.Email);
             }
 
-            return false; // Invalid credentials
+            return "INVALID CREDENTIALS"; // Invalid credentials
         }
 
-        //public string ForgotPassword(string email)
-        //{
-        //    var user = _userManager.FindByEmailAsync(email).Result;
-        //    if (user == null)
-        //    {
-        //        return "User not found!";
-        //    }
+        public string GenerateJwtToken(int userId, string Email)
+        {
+            var key = Encoding.UTF8.GetBytes(_config["JwtSettings:Secret"]!);
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, userId.ToString()),
+                new Claim(JwtRegisteredClaimNames.Email, Email)
+            };
 
-        //    var resetToken = _userManager.GeneratePasswordResetTokenAsync(user).Result;
+            var token = new JwtSecurityToken(
+                issuer: _config["JwtSettings:Issuer"],
+                audience: _config["JwtSettings:Audience"],
+                claims: claims,
+                expires: DateTime.UtcNow.AddMinutes(Convert.ToDouble(_config["JwtSettings:ExpirationInMinutes"])),
+                signingCredentials: new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256)
+            );
 
-        //    // Send reset token via email (implementation needed)
-        //    return $"Password reset token: {resetToken}";
-        //}
-
-        //public string ResetPassword(string email, string newPassword, string token)
-        //{
-        //    var user = _userManager.FindByEmailAsync(email).Result;
-        //    if (user == null)
-        //    {
-        //        return "User not found!";
-        //    }
-
-        //    var result = _userManager.ResetPasswordAsync(user, token, newPassword).Result;
-        //    if (!result.Succeeded)
-        //    {
-        //        return "Invalid or expired token!";
-        //    }
-
-        //    return "Password reset successful!";
-        //}
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
     }
 }

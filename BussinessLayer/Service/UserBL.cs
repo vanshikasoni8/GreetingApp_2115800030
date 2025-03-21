@@ -18,7 +18,7 @@ namespace BussinessLayer.Service
             return _UserRL.Registeration(registerModel);
         }
 
-        public bool Login(LoginModel loginModel)
+        public string Login(LoginModel loginModel)
         {
             return _UserRL.Login(loginModel);
         }

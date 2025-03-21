@@ -48,7 +48,7 @@ namespace AddressBookAuth.Services
             return GenerateJwtToken(user);
         }
 
-        private string GenerateJwtToken(UserEntity user)
+        public string GenerateJwtToken(UserEntity user)
         {
             var key = Encoding.UTF8.GetBytes(_config["JwtSettings:Secret"]!);
             var claims = new[]

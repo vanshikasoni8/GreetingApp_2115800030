@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Modellayer.Context;
 
@@ -11,9 +12,10 @@ using Modellayer.Context;
 namespace RepositaryLayer.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250321093402_ForgotMigration")]
+    partial class ForgotMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,12 +44,7 @@ namespace RepositaryLayer.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserId")
-                        .HasColumnType("int");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("UserId");
 
                     b.ToTable("Greetings");
                 });
@@ -86,22 +83,6 @@ namespace RepositaryLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("User");
-                });
-
-            modelBuilder.Entity("RepositaryLayer.Entity.GreetingEntity", b =>
-                {
-                    b.HasOne("RepositaryLayer.Entity.UserEntity", "User")
-                        .WithMany("Greeting")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("User");
-                });
-
-            modelBuilder.Entity("RepositaryLayer.Entity.UserEntity", b =>
-                {
-                    b.Navigation("Greeting");
                 });
 #pragma warning restore 612, 618
         }

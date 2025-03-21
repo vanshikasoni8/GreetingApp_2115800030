@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using BussinessLayer.Helper;
 using BussinessLayer.Interface;
 using BussinessLayer.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -31,15 +32,14 @@ try
     builder.Services.AddScoped<IGreetingRL, GreetingRL>();
     builder.Services.AddScoped<IGreetingBL, GreetingBL>();
 
-
-
-
-
+    builder.Services.AddScoped<PasswordService>();
 
     // Register AppDbContext (for Greeting App)
     builder.Services.AddDbContext<AppDbContext>(options =>
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+    // Add services to the container.
+    builder.Services.AddControllers();
     // Configure JWT Authentication (Properly)
     var jwtSettings = builder.Configuration.GetSection("JwtSettings");
     var key = Encoding.UTF8.GetBytes(jwtSettings["Secret"]!);
