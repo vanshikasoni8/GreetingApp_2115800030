@@ -14,8 +14,11 @@ namespace RepositaryLayer.Entity
         [Required]
         public string Email { get; set; } = " ";
         [Required]
+
+        //hasing and salting
         public string PasswordHash { get; set; }
-        public string Salt { get; internal set; }
+        public string Salt { get; internal set; }  
+
     }
 }
 
