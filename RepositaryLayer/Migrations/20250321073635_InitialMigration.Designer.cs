@@ -11,8 +11,8 @@ using Modellayer.Context;
 namespace RepositaryLayer.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20250305200433_InitiateMigration")]
-    partial class InitiateMigration
+    [Migration("20250321073635_InitialMigration")]
+    partial class InitialMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -46,6 +46,35 @@ namespace RepositaryLayer.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Greetings");
+                });
+
+            modelBuilder.Entity("RepositaryLayer.Entity.UserEntity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PasswordHash")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Salt")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("User");
                 });
 #pragma warning restore 612, 618
         }

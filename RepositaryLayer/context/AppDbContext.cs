@@ -24,5 +24,9 @@ namespace Modellayer.Context
         }
 
         public DbSet<GreetingEntity> Greetings { get; set; }
+
+        public DbSet<UserEntity> User{ get; set; }
+
+
     }
 }
